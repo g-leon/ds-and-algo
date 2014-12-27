@@ -1,5 +1,3 @@
-.cpb
-.depend
-.layout
-bin/
-obj/
+*
+!**/*.cpp
+!.gitignore
