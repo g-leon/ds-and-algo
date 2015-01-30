@@ -16,16 +16,17 @@ using namespace std;
 struct Trie {
     Trie *fiu[26];
     int fiu_val[26];
+
     Trie() {
-        for (int i = 0; i < 26; i++) fiu_val[i] = 0;
-        memset(fiu, 0, sizeof(fiu));
+        memset(fiu_val, 0, sizeof(fiu_val));
+        memset(fiu, NULL, sizeof(fiu));
     }
 }*T;
 
 void ins(Trie *nod, char *s) {
     if (*s == '\n' || *s == '\0') return;
 
-    if (nod->fiu[CH] == 0) {
+    if (nod->fiu[CH] == NULL) {
         nod->fiu[CH] = new Trie;
     }
 
@@ -51,7 +52,7 @@ int main() {
     fin >> t;
     for (int i = 1; i <= t; i++) {
         T = new Trie;
-        char *c = new char[1000001];
+        char *c = new char[1000005];
         int nr_words;
         int result = 0;
 
@@ -59,7 +60,7 @@ int main() {
         fin.getline(c, 10);
 
         for (int j = 1; j <= nr_words; j++) {
-            fin.getline(c, 1000001);
+            fin.getline(c, 1000005);
             ins(T, c);
             result += autocomp(T, c, 1);
         }
