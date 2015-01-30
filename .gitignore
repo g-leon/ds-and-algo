@@ -3,3 +3,6 @@
 **/*.out
 **/*.depend
 **/*.layout
+**/*.exe
+**/*.o
+**/*.txt
