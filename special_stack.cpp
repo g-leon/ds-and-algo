@@ -85,6 +85,4 @@ int main() {
     st->pop();
     cout << "Min: " << st->get_min() << endl;
     delete st;
-
-    cout << st;
 }
